@@ -1,34 +1,36 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Wrapper, Content } from './post.style';
 
 export default function Post({ post, index }) {
   const { slug, frontMatter } = post;
-  const { title, description, date, thumbnailUrl } = frontMatter;
+  const { title, description, date, thumbnailUrl, tags } = frontMatter;
 
   return (
     <Link href={'/blog/' + slug} passHref key={index}>
-      <div style={{ maxWidth: '540px' }}>
-        <div>
+      <Wrapper>
+        <Content>
+          <div className='thumb'>
+            <Image
+              src={thumbnailUrl}
+              alt='thumbnail'
+              width={500}
+              height={246}
+              objectFit='cover'
+            />
+            <span className='tag'>{tags[0]}</span>
+          </div>
           <div>
             <div>
               <h5>{title}</h5>
-              <p>{description}</p>
+              {/* <p>{description}</p> */}
               <p>
                 <small>{date}</small>
               </p>
             </div>
           </div>
-          <div>
-            <Image
-              src={thumbnailUrl}
-              alt='thumbnail'
-              width={500}
-              height={400}
-              objectFit='cover'
-            />
-          </div>
-        </div>
-      </div>
+        </Content>
+      </Wrapper>
     </Link>
   );
 }
