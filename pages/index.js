@@ -4,10 +4,11 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import Main from '../Layout/Main';
 
 export default function Home({ posts }) {
   return (
-    <div>
+    <Main>
       {posts.map((post, index) => (
         <Link href={'/blog/' + post.slug} passHref key={index}>
           <div className='card mb-3 pointer' style={{ maxWidth: '540px' }}>
@@ -37,7 +38,7 @@ export default function Home({ posts }) {
           </div>
         </Link>
       ))}
-    </div>
+    </Main>
   );
 }
 
