@@ -13,3 +13,13 @@ export const Wrapper = styled.nav`
     margin: 0;
   }
 `;
+
+// Internet : c’est quoi ?
+
+// Introduction au web.
+
+// Comment le web fonctionne ?
+
+// HTTP : c’est quoi ?
+
+// HTML : c’est quoi ?
