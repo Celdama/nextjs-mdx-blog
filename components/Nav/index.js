@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Title } from './nav.tw';
+import { Title } from './nav.styles';
 
 const Nav = () => {
   return (
