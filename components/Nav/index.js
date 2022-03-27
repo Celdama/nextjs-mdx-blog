@@ -1,16 +1,17 @@
 import Link from 'next/link';
-import { Title } from './nav.styles';
+import { Wrapper } from './nav.styles';
 
 const Nav = () => {
   return (
-    <nav className='nav p-3 border-bottom'>
+    <Wrapper>
       <Link href='/' passHref>
-        <Title>Celdama</Title>
+        <h2>Mon Blog</h2>
       </Link>
       <Link href='/bio' passHref>
         <p className='ms-5 pointer lead my-auto'>Bio</p>
       </Link>
-    </nav>
+      {/* <input type='search' name='' id='' /> */}
+    </Wrapper>
   );
 };
 export default Nav;
