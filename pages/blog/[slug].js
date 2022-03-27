@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import Button from '../../components/Button.jsx'
+import Button from '../../components/Button'
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join('posts'))
@@ -37,7 +37,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
 const PostPage = ({ frontMatter: { title }, mdxSource }) => {
   return (
-    <div className="mt-4">
+    <div>
       <h1>{title}</h1>
       <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
     </div>
