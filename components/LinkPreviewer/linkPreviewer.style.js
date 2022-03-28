@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   /* height: 140px; */
   background-color: white;
   .body {
-    padding: 8px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,8 +26,18 @@ export const Wrapper = styled.div`
     margin: 10px 0;
   }
 
+  .image {
+    display: none;
+  }
+
   .link {
     color: black;
+  }
+
+  @media screen and (min-width: 500px) {
+    .image {
+      display: block;
+    }
   }
 `;
 
