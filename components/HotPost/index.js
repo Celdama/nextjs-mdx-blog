@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Wrapper } from './hotPost.style';
 
 export const HotPost = ({ hotPost }) => {
-  console.log(hotPost.frontMatter.title);
   return (
     <Wrapper>
       <h2>Hot post</h2>

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
 import { HotPost } from '../components/HotPost';
+import { Categories } from '../components/Categories';
 
 export default function Home({ posts }) {
   const hotPost = posts[0];
@@ -14,6 +15,7 @@ export default function Home({ posts }) {
   return (
     <Layout>
       <HotPost hotPost={hotPost} />
+      <Categories />
       {posts.map((post, index) => (
         <Post key={index} post={post} index={index} />
       ))}
