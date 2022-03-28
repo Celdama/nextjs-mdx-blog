@@ -42,7 +42,6 @@ const Nav = () => {
           />
         </svg>
       </div>
-      {/* <input type='search' name='' id='' /> */}
     </Wrapper>
   );
 };
