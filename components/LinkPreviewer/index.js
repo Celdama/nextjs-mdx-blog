@@ -21,8 +21,8 @@ const Card = ({ image, title, text, link }) => {
       <div className='image'>
         <Image
           src={image}
-          width={500}
-          height={500}
+          width={200}
+          height={180}
           alt='thumbnail'
           objectFit='cover'
         />
