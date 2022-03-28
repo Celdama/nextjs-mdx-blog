@@ -9,6 +9,7 @@ import Layout from '../../components/Layout';
 import { Wrapper } from './slug.style';
 import Image from 'next/image';
 import { PreviewYoutubeLink } from '../../components/previewYoutubeLink';
+import { LinkPreviewer } from '../../components/LinkPreviewer';
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join('posts'));
@@ -88,7 +89,12 @@ const PostPage = ({
         </div>
         <MDXRemote
           {...mdxSource}
-          components={{ Button, SyntaxHighlighter, PreviewYoutubeLink }}
+          components={{
+            Button,
+            SyntaxHighlighter,
+            PreviewYoutubeLink,
+            LinkPreviewer,
+          }}
         />
       </Wrapper>
     </Layout>
