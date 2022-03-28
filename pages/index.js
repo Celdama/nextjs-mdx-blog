@@ -6,10 +6,14 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
+import { HotPost } from '../components/HotPost';
 
 export default function Home({ posts }) {
+  const hotPost = posts[0];
+
   return (
     <Layout>
+      <HotPost hotPost={hotPost} />
       {posts.map((post, index) => (
         <Post key={index} post={post} index={index} />
       ))}

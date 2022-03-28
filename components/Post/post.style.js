@@ -10,12 +10,14 @@ export const Wrapper = styled.article`
   /* background-color: #f9f9f9; */
 
   h5 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 12px 0;
+    color: #352f43;
   }
 
   p {
     margin: 0;
+    color: #c4c3c6;
   }
 
   .thumb {
@@ -23,8 +25,8 @@ export const Wrapper = styled.article`
 
     .tag {
       position: absolute;
-      left: 0;
-      bottom: 5px;
+      left: 5px;
+      bottom: 10px;
       padding: 6px 8px;
       text-transform: capitalize;
       background-color: #eeb395;
