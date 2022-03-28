@@ -8,7 +8,7 @@ import Button from '../../components/Button';
 import Layout from '../../components/Layout';
 import { Wrapper } from './slug.style';
 import Image from 'next/image';
-import { PreviewYoutubeLink } from '../../components/previewYoutubeLink';
+import { YoutubeLinkPreviewer } from '../../components/YoutubeLinkPreviewer';
 import { LinkPreviewer } from '../../components/LinkPreviewer';
 
 export const getStaticPaths = async () => {
@@ -92,7 +92,7 @@ const PostPage = ({
           components={{
             Button,
             SyntaxHighlighter,
-            PreviewYoutubeLink,
+            YoutubeLinkPreviewer,
             LinkPreviewer,
           }}
         />
