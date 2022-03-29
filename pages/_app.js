@@ -1,6 +1,6 @@
 import Nav from '../components/Nav';
 import 'normalize.css/normalize.css';
-import { GlobalStyle } from './GlobalStyle';
+import { GlobalStyle } from '../components/GlobalStyle';
 
 function MyApp({ Component, pageProps }) {
   return (
