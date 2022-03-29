@@ -6,25 +6,12 @@ const Nav = () => {
     <Wrapper>
       <div className='content'>
         <div className='header'>
-          <svg
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M4 6h16M4 12h16M4 18h16'
-            />
-          </svg>
           <Link href='/' passHref>
             <h2>Mon Blog</h2>
           </Link>
-          <Link href='/bio' passHref>
+          {/* <Link href='/bio' passHref>
             <p className='ms-5 pointer lead my-auto'>Bio</p>
-          </Link>
+          </Link> */}
         </div>
         <div className='footer'>
           <input type='text' placeholder='Search ...' />
