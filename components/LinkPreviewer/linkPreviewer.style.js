@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   background-color: white;
   width: 100%;
+  margin: 10px 0;
 
   .body {
     padding: 12px;
@@ -21,7 +22,6 @@ export const Wrapper = styled.div`
 
   p {
     font-size: 0.8rem;
-    /* width: 80%; */
     margin: 0;
     color: rgba(0, 0, 0, 0.5);
   }
@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
 
   @media screen and (min-width: 500px) {
     .image {
-      display: block;
+      display: flex;
     }
   }
 `;

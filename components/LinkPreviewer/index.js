@@ -18,13 +18,16 @@ const Card = ({ image, title, text, link }) => {
         <p className='desc'>{text}</p>
         <p className='link'>{`${link.slice(0, 40)}...`}</p>
       </div>
-      <Image
-        src={image}
-        width={200}
-        height={180}
-        alt='thumbnail'
-        objectFit='cover'
-      />
+      <div className='image'>
+        <Image
+          src={image}
+          width={200}
+          // layout='fill'
+          height={180}
+          alt='thumbnail'
+          objectFit='cover'
+        />
+      </div>
     </Wrapper>
   );
 };
