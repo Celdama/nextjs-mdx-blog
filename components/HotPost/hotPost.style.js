@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 36rem;
+  width: 100%;
+  max-width: 38rem;
 
   h2 {
     color: #2c2e42;
