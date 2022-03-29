@@ -16,17 +16,15 @@ const Card = ({ image, title, text, link }) => {
       <div className='body'>
         <h5>{title}</h5>
         <p className='desc'>{text}</p>
-        <p className='link'>{link}</p>
+        <p className='link'>{`${link.slice(0, 40)}...`}</p>
       </div>
-      <div className='image'>
-        <Image
-          src={image}
-          width={200}
-          height={180}
-          alt='thumbnail'
-          objectFit='cover'
-        />
-      </div>
+      <Image
+        src={image}
+        width={200}
+        height={180}
+        alt='thumbnail'
+        objectFit='cover'
+      />
     </Wrapper>
   );
 };

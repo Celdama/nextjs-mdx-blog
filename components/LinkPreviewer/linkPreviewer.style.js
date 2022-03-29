@@ -5,10 +5,12 @@ export const Wrapper = styled.div`
   border-radius: 4px;
   display: flex;
   background-color: white;
+  width: 100%;
+
   .body {
     padding: 12px;
-    width: 400px;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
   }
@@ -19,12 +21,14 @@ export const Wrapper = styled.div`
 
   p {
     font-size: 0.8rem;
+    /* width: 80%; */
     margin: 0;
     color: rgba(0, 0, 0, 0.5);
   }
 
   .desc {
     margin: 10px 0;
+    line-height: 1rem;
   }
 
   .image {
@@ -33,6 +37,7 @@ export const Wrapper = styled.div`
 
   .link {
     color: black;
+    line-height: 1rem;
   }
 
   @media screen and (min-width: 500px) {
