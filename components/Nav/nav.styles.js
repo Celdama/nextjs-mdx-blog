@@ -13,8 +13,6 @@ export const Wrapper = styled.nav`
   font-family: sans-serif;
   background-color: #352f43;
   color: whitesmoke;
-  /* align-items: center; */
-  /* justify-content: space-between; */
 
   .header {
     display: flex;
