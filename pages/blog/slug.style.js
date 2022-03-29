@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  background-color: white;
+  padding: 18px;
   .top {
     display: flex;
     align-items: center;
