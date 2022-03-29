@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
-import { Wrapper } from './slug.style';
+import { Wrapper } from '../../components/slug.style';
 import Image from 'next/image';
 import { YoutubeLinkPreviewer } from '../../components/YoutubeLinkPreviewer';
 import { LinkPreviewer } from '../../components/LinkPreviewer';
