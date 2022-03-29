@@ -1,14 +1,14 @@
 import React from 'react';
-import { Wrapper } from './categories.style';
+import { Wrapper, Header, TagsList } from './categories.style';
 
 export const Categories = () => {
   return (
     <Wrapper>
-      <div className='header'>
+      <Header>
         <h2>Categories</h2>
-        <span>See all</span>
-      </div>
-      <div className='list'>
+        <button>See all</button>
+      </Header>
+      <TagsList>
         <ul>
           <li>HTML</li>
           <li className='current'>CSS</li>
@@ -20,7 +20,7 @@ export const Categories = () => {
           <li className='hide'>Job</li>
           <li className='hide'>Mindset</li>
         </ul>
-      </div>
+      </TagsList>
     </Wrapper>
   );
 };
