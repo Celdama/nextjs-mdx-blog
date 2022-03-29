@@ -3,16 +3,13 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   font-family: sans-serif;
   margin: 20px 0;
+  color: #2c2e42;
 `;
 
 export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  h2 {
-    color: #2c2e42;
-  }
 
   button {
     background-color: transparent;
