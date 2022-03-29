@@ -27,12 +27,10 @@ export const Post = ({ post, index }) => {
             <Tag>{tags}</Tag>
           </PostImageContainer>
           <PostInfoContainer>
-            <div>
-              <h5>{title}</h5>
-              <p>
-                <small>{date}</small>
-              </p>
-            </div>
+            <h5>{title}</h5>
+            <p>
+              <small>{date}</small>
+            </p>
           </PostInfoContainer>
         </Content>
       </Link>
