@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #f6f6f6;
   }
 
+  * {
+    font-family: sans-serif;
+  }
+
   .container { 
     display: flex;
     flex-wrap: wrap;
