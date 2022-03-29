@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import {
   Wrapper,
@@ -10,7 +9,7 @@ import {
 export const LinkPreviewer = ({ href, image, title, text }) => {
   return (
     <Link href={href} target='_blank' rel='noreferrer'>
-      <Wrapper className='card'>
+      <Wrapper>
         <LinkBodyContainer>
           <h5>{title}</h5>
           <p className='desc'>{text}</p>
