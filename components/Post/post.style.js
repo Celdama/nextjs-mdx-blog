@@ -12,8 +12,20 @@ export const Wrapper = styled.article`
   :hover {
     cursor: pointer;
   }
-  /* background-color: #f9f9f9; */
+`;
 
+export const Content = styled.div``;
+
+export const PostImageContainer = styled.div`
+  position: relative;
+
+  img {
+    border-radius: 3px;
+    height: 220px;
+  }
+`;
+
+export const PostInfoContainer = styled.div`
   h5 {
     font-size: 1rem;
     margin: 12px 0;
@@ -24,26 +36,14 @@ export const Wrapper = styled.article`
     margin: 0;
     color: #6c757d;
   }
-
-  .thumb {
-    position: relative;
-
-    .tag {
-      position: absolute;
-      left: 5px;
-      bottom: 10px;
-      padding: 6px 8px;
-      text-transform: capitalize;
-      background-color: #eeb395;
-      color: #352f43;
-      font-family: sans-serif;
-    }
-  }
-
-  img {
-    border-radius: 3px;
-    height: 220px;
-  }
 `;
 
-export const Content = styled.div``;
+export const Tag = styled.span`
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  padding: 6px 8px;
+  text-transform: capitalize;
+  background-color: #eeb395;
+  color: #352f43;
+`;
