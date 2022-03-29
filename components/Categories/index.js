@@ -15,6 +15,10 @@ export const Categories = () => {
           <li>JavaScript</li>
           <li>ReactJS</li>
           <li>TailwindCSS</li>
+          <li className='hide'>Github</li>
+          <li className='hide'>Web</li>
+          <li className='hide'>Job</li>
+          <li className='hide'>Mindset</li>
         </ul>
       </div>
     </Wrapper>

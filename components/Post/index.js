@@ -7,8 +7,8 @@ export default function Post({ post, index }) {
   const { title, description, date, thumbnailUrl, tags } = frontMatter;
 
   return (
-    <Link href={'/blog/' + slug} passHref key={index}>
-      <Wrapper>
+    <Wrapper>
+      <Link href={'/blog/' + slug} passHref key={index}>
         <Content>
           <div className='thumb'>
             <Image
@@ -29,7 +29,7 @@ export default function Post({ post, index }) {
             </div>
           </div>
         </Content>
-      </Wrapper>
-    </Link>
+      </Link>
+    </Wrapper>
   );
 }

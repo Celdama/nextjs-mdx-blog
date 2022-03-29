@@ -16,9 +16,11 @@ export default function Home({ posts }) {
     <Layout>
       <HotPost hotPost={hotPost} />
       <Categories />
-      {posts.map((post, index) => (
-        <Post key={index} post={post} index={index} />
-      ))}
+      <div className='container'>
+        {posts.map((post, index) => (
+          <Post key={index} post={post} index={index} />
+        ))}
+      </div>
     </Layout>
   );
 }

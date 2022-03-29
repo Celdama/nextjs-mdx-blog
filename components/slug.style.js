@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   background-color: #f6f6f6;
   padding: 18px;
+  max-width: 46rem;
+  margin: 0 auto;
 
   .info {
     h1 {

@@ -7,6 +7,7 @@ export const Wrapper = styled.article`
   padding: 12px;
   font-family: sans-serif;
   background-color: white;
+  width: 36rem;
 
   :hover {
     cursor: pointer;

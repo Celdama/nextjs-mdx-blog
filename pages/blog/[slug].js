@@ -71,7 +71,7 @@ const PostPage = ({
           <div className='post-img'>
             <Image
               src={thumbnailUrl}
-              height={300}
+              height={400}
               width={500}
               alt='thumbnail'
             />

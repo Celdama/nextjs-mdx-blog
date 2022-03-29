@@ -32,4 +32,10 @@ export const Wrapper = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    .hide {
+      display: none;
+    }
+  }
 `;

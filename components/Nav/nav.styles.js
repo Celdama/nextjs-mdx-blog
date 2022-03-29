@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.nav`
   .content {
-    max-width: 36rem;
+    max-width: 80rem;
     margin: 0 auto;
     flex-direction: column;
 
