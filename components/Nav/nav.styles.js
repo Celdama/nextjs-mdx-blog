@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.nav`
+  .content {
+    max-width: 36rem;
+    margin: 0 auto;
+    flex-direction: column;
+
+    display: flex;
+  }
+
   padding: 16px;
   font-family: sans-serif;
   background-color: #352f43;
   color: whitesmoke;
-  display: flex;
-  flex-direction: column;
   /* align-items: center; */
   /* justify-content: space-between; */
 
@@ -20,11 +26,14 @@ export const Wrapper = styled.nav`
     display: flex;
     margin-top: 22px;
     justify-content: space-between;
+    gap: 10px;
 
     input {
+      flex-grow: 1;
       padding: 12px;
       color: whitesmoke;
-      width: 80%;
+      /* width: 90%; */
+      outline: none;
       border: none;
       background-color: #494355;
     }

@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background-color: white;
+  background-color: #f6f6f6;
   padding: 18px;
+
+  .info {
+    h1 {
+      color: #2c2e42;
+      margin-bottom: 0;
+    }
+  }
   .top {
     display: flex;
     align-items: center;
@@ -19,8 +26,23 @@ export const Wrapper = styled.div`
     color: #352f43;
   }
 
+  .post-img {
+    display: flex;
+    flex-direction: column;
+  }
+
   .date {
-    color: #c4c3c6;
+    color: #6c757d;
+    font-size: 0.8rem;
+  }
+
+  .content {
+    h1 {
+      color: #2c2e42;
+    }
+
+    color: #2c2e42;
+    line-height: 1.8rem;
   }
 
   .author {
@@ -33,7 +55,7 @@ export const Wrapper = styled.div`
 
     p {
       margin-left: 15px;
-      color: #c4c3c6;
+      color: #6c757d;
       font-size: 0.9rem;
 
       span {

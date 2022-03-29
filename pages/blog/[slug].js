@@ -68,34 +68,43 @@ const PostPage = ({
           </div>
           <h1>{title}</h1>
           <p className='date'>{date}</p>
-          <Image src={thumbnailUrl} height={300} width={500} alt='thumbnail' />
-          <div className='author'>
-            <Image src='/avatar.jpg' height={60} width={60} alt='avatar' />
-            <p>
-              by{' '}
-              <span>
-                <a
-                  href='https://twitter.com/CeldamaDev'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Celdama
-                </a>
-              </span>{' '}
-              <br />
-              Front End Developer
-            </p>
+          <div className='post-img'>
+            <Image
+              src={thumbnailUrl}
+              height={300}
+              width={500}
+              alt='thumbnail'
+            />
+            <div className='author'>
+              <Image src='/avatar.jpg' height={60} width={62} alt='avatar' />
+              <p>
+                by{' '}
+                <span>
+                  <a
+                    href='https://twitter.com/CeldamaDev'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Celdama
+                  </a>
+                </span>{' '}
+                <br />
+                Front End Developer
+              </p>
+            </div>
           </div>
         </div>
-        <MDXRemote
-          {...mdxSource}
-          components={{
-            Button,
-            SyntaxHighlighter,
-            YoutubeLinkPreviewer,
-            LinkPreviewer,
-          }}
-        />
+        <div className='content'>
+          <MDXRemote
+            {...mdxSource}
+            components={{
+              Button,
+              SyntaxHighlighter,
+              YoutubeLinkPreviewer,
+              LinkPreviewer,
+            }}
+          />
+        </div>
       </Wrapper>
     </Layout>
   );

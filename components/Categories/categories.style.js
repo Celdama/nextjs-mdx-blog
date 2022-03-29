@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    h2 {
+      color: #2c2e42;
+    }
   }
 
   .list {

@@ -7,6 +7,10 @@ export const Wrapper = styled.article`
   padding: 12px;
   font-family: sans-serif;
   background-color: white;
+
+  :hover {
+    cursor: pointer;
+  }
   /* background-color: #f9f9f9; */
 
   h5 {
@@ -17,7 +21,7 @@ export const Wrapper = styled.article`
 
   p {
     margin: 0;
-    color: #c4c3c6;
+    color: #6c757d;
   }
 
   .thumb {

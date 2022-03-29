@@ -15,15 +15,14 @@ export default function Post({ post, index }) {
               src={thumbnailUrl}
               alt='thumbnail'
               width={500}
+              layout='responsive'
               height={246}
-              objectFit='cover'
             />
             <span className='tag'>{tags[0]}</span>
           </div>
           <div>
             <div>
               <h5>{title}</h5>
-              {/* <p>{description}</p> */}
               <p>
                 <small>{date}</small>
               </p>

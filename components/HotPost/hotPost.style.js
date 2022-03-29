@@ -2,13 +2,20 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   font-family: sans-serif;
+  h2 {
+    color: #2c2e42;
+  }
 
   .content {
     height: 200px;
     position: relative;
 
+    :hover {
+      cursor: pointer;
+    }
+
     .text {
-      width: 230px;
+      width: 60%;
       height: 130px;
       position: absolute;
       z-index: 2;
@@ -29,7 +36,8 @@ export const Wrapper = styled.div`
 
     p {
       margin: 0;
-      color: #c4c3c6;
+      color: #6c757d;
+      font-size: 0.9rem;
     }
 
     .tag {
