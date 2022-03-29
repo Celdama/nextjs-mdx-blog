@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Layout from '../components/Layout';
-import Post from '../components/Post';
+import { Post } from '../components/Post';
 import { HotPost } from '../components/HotPost';
 import { Categories } from '../components/Categories';
 

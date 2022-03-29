@@ -1,16 +1,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Wrapper, Content } from './post.style';
+import {
+  Wrapper,
+  Content,
+  PostImageContainer,
+  Tag,
+  PostInfoContainer,
+} from './post.style';
 
-export default function Post({ post, index }) {
+export const Post = ({ post, index }) => {
   const { slug, frontMatter } = post;
-  const { title, description, date, thumbnailUrl, tags } = frontMatter;
+  const { title, date, thumbnailUrl, tags } = frontMatter;
 
   return (
     <Wrapper>
       <Link href={'/blog/' + slug} passHref key={index}>
         <Content>
-          <div className='thumb'>
+          <PostImageContainer>
             <Image
               src={thumbnailUrl}
               alt='thumbnail'
@@ -18,18 +24,18 @@ export default function Post({ post, index }) {
               layout='responsive'
               height={246}
             />
-            <span className='tag'>{tags[0]}</span>
-          </div>
-          <div>
+            <Tag>{tags}</Tag>
+          </PostImageContainer>
+          <PostInfoContainer>
             <div>
               <h5>{title}</h5>
               <p>
                 <small>{date}</small>
               </p>
             </div>
-          </div>
+          </PostInfoContainer>
         </Content>
       </Link>
     </Wrapper>
   );
-}
+};
