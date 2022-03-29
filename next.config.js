@@ -11,6 +11,12 @@ const nextConfig = {
       'images.unsplash.com',
       'cdn-media-1.freecodecamp.org',
       '4.bp.blogspot.com',
+      'www.udacity.com',
+      's3.amazonaws.com',
+      'jaredthenerd.com',
+      'cdn-media-2.freecodecamp.org',
+      'techcrunch.com',
+      'avatars.githubusercontent.com',
     ],
   },
 };
