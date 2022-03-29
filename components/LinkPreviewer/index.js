@@ -1,33 +1,31 @@
 import React from 'react';
 import Image from 'next/image';
-import { Wrapper, Link } from './linkPreviewer.style';
+import {
+  Wrapper,
+  Link,
+  LinkBodyContainer,
+  LinkImageContainer,
+} from './linkPreviewer.style';
 
 export const LinkPreviewer = ({ href, image, title, text }) => {
   return (
     <Link href={href} target='_blank' rel='noreferrer'>
-      <Card image={image} title={title} text={text} link={href} />
+      <Wrapper className='card'>
+        <LinkBodyContainer>
+          <h5>{title}</h5>
+          <p className='desc'>{text}</p>
+          <p className='link'>{`${href.slice(0, 40)}...`}</p>
+        </LinkBodyContainer>
+        <LinkImageContainer>
+          <Image
+            src={image}
+            width={200}
+            height={180}
+            alt='thumbnail'
+            objectFit='cover'
+          />
+        </LinkImageContainer>
+      </Wrapper>
     </Link>
-  );
-};
-
-const Card = ({ image, title, text, link }) => {
-  return (
-    <Wrapper className='card'>
-      <div className='body'>
-        <h5>{title}</h5>
-        <p className='desc'>{text}</p>
-        <p className='link'>{`${link.slice(0, 40)}...`}</p>
-      </div>
-      <div className='image'>
-        <Image
-          src={image}
-          width={200}
-          // layout='fill'
-          height={180}
-          alt='thumbnail'
-          objectFit='cover'
-        />
-      </div>
-    </Wrapper>
   );
 };

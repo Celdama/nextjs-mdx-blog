@@ -7,14 +7,19 @@ export const Wrapper = styled.div`
   background-color: white;
   width: 100%;
   margin: 10px 0;
+`;
 
-  .body {
-    padding: 12px;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-  }
+export const Link = styled.a`
+  text-decoration: none;
+  color: black;
+`;
+
+export const LinkBodyContainer = styled.div`
+  padding: 12px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
 
   h5 {
     margin: 0;
@@ -31,23 +36,16 @@ export const Wrapper = styled.div`
     line-height: 1rem;
   }
 
-  .image {
-    display: none;
-  }
-
   .link {
     color: black;
     line-height: 1rem;
   }
-
-  @media screen and (min-width: 500px) {
-    .image {
-      display: flex;
-    }
-  }
 `;
 
-export const Link = styled.a`
-  text-decoration: none;
-  color: black;
+export const LinkImageContainer = styled.div`
+  display: none;
+
+  @media screen and (min-width: 500px) {
+    display: flex;
+  }
 `;
