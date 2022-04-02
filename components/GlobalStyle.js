@@ -18,4 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .post-img {
+    width: 100%;
+  }
 `;

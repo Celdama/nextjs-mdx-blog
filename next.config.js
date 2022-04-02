@@ -34,6 +34,9 @@ const nextConfig = {
       '2e8ram2s1li74atce18qz5y1-wpengine.netdna-ssl.com',
       'www.udacity.com',
       'martincmartin.wordpress.com',
+      'git-scm.com',
+      'blog.red-badger.com',
+      'wac-cdn.atlassian.com',
     ],
   },
 };

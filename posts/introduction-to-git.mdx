@@ -1,0 +1,268 @@
+---
+title: 'Les bases de Git'
+date: 'Avril 02, 2022'
+description: ''
+thumbnailUrl: '/introduction-to-git.jpg'
+tags: ['Git']
+---
+
+# Les bases de Git
+
+## Introduction
+
+Pour faire simple, tu peux te représenter Git comme un bouton de sauvegarde vraiment puissant de tes fichiers et répertoires. Officiellement, Git est un système de contrôle de version.
+
+Une sauvegarde dans un éditeur de texte (prenons comme exemple Word) enregistre tous les mots du document dans un seul fichier. Tu n’as jamais qu’un seul enregistrement du fichier, tel que mondoc.doc, à moins que tu fasses des copies en double (c’est vraiment difficile à gérer) :
+
+mondoc-version1.doc, mondoc-version2.doc, mondoc-version-finale.doc
+
+En revanche, une sauvegarde dans Git enregistrer les différences entre les fichiers et les dossiers ET conserve un historique de chaque sauvegarde. En tant que développeur, Git va te permettre d’examiner l’évolution de ton projet, et de consulter ou restaurer facilement les anciennes versions de ton projet. Et une fois connecté à un réseau, Git va te permettre de pousser (push) ton projet vers Github ou d’autres alternatives : Bitbucket, GitLab pour partager et collaborer avec d’autres développeurs.
+
+Alors que Git fonctionne sur ton ordinateur local, Github est une installation de stockage à distance sur le Web pour tous tes projets. Cela signifier qu’en apprenant Git, tu vas pouvoir présenter ton portfolio sur Github ! Toutes les entreprises de développement considèrent l’utilisation de Git comme une compétence essentielle pour les développeurs.
+
+Le fait de disposer d’un compte Github va te permettre de prouver à ton futur employeur potentiel ce dont tu es capable.
+
+Lis les chapitres 1.1 à 1.4 pour avoir une vision globale des différences entre les systèmes de contrôle de version:
+
+{<LinkPreviewer
+    href='https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control'
+    image='https://git-scm.com/book/en/v2/images/local.png'
+    title='Getting started - About Version Control'
+    text='This chapter will be about getting started with Git. We will begin by explaining some background on version control tools'
+/>}
+
+{<YoutubeLinkPreviewer url='https://www.youtube.com/embed/8oRjP8yj2Wo' />}
+{<YoutubeLinkPreviewer url='https://www.youtube.com/embed/1h9_cB9mPT8' />}
+
+{<LinkPreviewer
+    href='https://github.com/'
+    image='https://imgs.search.brave.com/08uSwZ6UcCcL7n_zerDr5kOsIfSL5YDhbQFkSH5toVo/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5l/VENiZFJfQUZ6YnFI/TVBYaHJKV1VRSGFF/SyZwaWQ9QXBp'
+    title='Github: Where the world builds software'
+    text='Github is where over 73 millions developers shape the future of software, together. Contribute to the open source.'
+/>}
+{<LinkPreviewer
+    href='https://blog.red-badger.com/2016/11/29/gitgithub-in-plain-english'
+    image='https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-238.jpg'
+    title='Git and Github in Plain English'
+    text='This blog post aims to explain the “theory” behind version control (Git and Github) in plain English so that you understand the big picture'
+/>}
+{<LinkPreviewer
+    href='https://www.atlassian.com/git/tutorials/what-is-version-control'
+    image='https://wac-cdn.atlassian.com/dam/jcr:34e935dd-3108-40ef-bb3d-9ed01d977d6d/hero.svg?cdnVersion=296'
+    title='What is version control?'
+    text='Version control, also known as source control, is the practice of tracking and managing changes to software code'
+/>}
+{<LinkPreviewer
+    href='https://www.atlassian.com/git/tutorials/what-is-git'
+    image='https://wac-cdn.atlassian.com/dam/jcr:f6948a92-f446-466f-8783-1dd1cbcc661a/hero.svg?cdnVersion=296'
+    title='What is Git'
+    text='By far, the most widely used modern version control system in the world today is Git. Git is a mature, actively maintained open'
+/>}
+
+Après avoir consommé ces ressources, tu dois être capable de répondre à ces questions, prend le temps d’avoir une réponse à chaque questions et n’hésite pas à chercher sur internet si vraiment tu ne trouves pas de réponses dans ces ressources.
+
+- Quel type de programme est Git ?
+- Quelles sont les différences entre Git et un éditeur de texte en termes de sauvegarde et de leur conservation des données ?
+- Git fonctionne-t-il au niveau local ou distant ?
+- Github fonctionne-t-il au niveau local ou distant ?
+- Pourquoi Git est-il utile pour un développeur seul ?
+- Pourquoi Git et Github sont-ils utiles à une équipe de développeurs ?
+
+<br />
+# Mise en place de Git
+<br />
+
+Je travail presque exclusivement sur Mac, donc je vais te montrer l’installation
+pour MacOS. Tu peux facilement trouver l’installation si tu es sur Windows. Je te
+laisse faire tes premières recherches.
+
+<br />
+## I. Installer Git
+<br />
+
+### 1.1 Installer Homebrew
+
+Tu dois d’abord installer Homebrew, vérifie d’abord que tu remplis les exigences pour l’installation de Homebrew <a href='https://docs.brew.sh/Installation#macos-requirements' target='_blank'>ici</a>
+
+Ensuite copie et colle ce qui suit dans ton terminal :
+
+<SyntaxHighlighter language='bash'>
+  {`
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  `}
+</SyntaxHighlighter>
+
+### 1.2 Mise à jour de Git
+
+MacOS est déjà livré avec une version de Git, mais il faut la mettre à jour vers la dernière version.
+
+Dans ton terminal colle ça:
+
+<SyntaxHighlighter language='bash'>
+  {`
+  brew install git
+  `}
+</SyntaxHighlighter>
+Cela va installer la dernière version de Git.
+
+### 1.3 Vérifie ta version
+
+Ferme ton terminal, et ouvre le à nouveau et vérifie que ta version de Git est au moins la version 2.28 en utilisant cette commande :
+
+<SyntaxHighlighter language='bash'>
+  {`
+  git --version
+  `}
+</SyntaxHighlighter>
+
+<br />
+## II. Configurer Git et Github
+<br />
+
+### 2.1 Configuration de Git
+
+Pour que Git fonctionne correctement, tu dois lui faire savoir qui tu es, afin qu’il puisse relier un utilisateur Git Local (toi) à Github. Lorsque tu vas travailler en équipe, cela permet aux gens de voir ce que tu as fais, et qui est l’auteur de chaque ligne de code.
+
+Les commandes ci-dessous vont configurer Git.
+
+Assure-toi de saisir tes propres informations et entre les guillemets (mais inclus les guillemets).
+
+<SyntaxHighlighter language='bash'>
+  {`
+  git config --global user.name "Ton nom"
+  git config --global user.email "tonnom@example.com"
+  `}
+</SyntaxHighlighter>
+
+Github à récemment changé la branche par défaut des nouveaux dépôts de master à main.
+
+Change la branche par défaut pour Git en utilisant cette commande:
+
+<SyntaxHighlighter language='bash'>
+  {`
+  git config --global init.defaultBranch main
+  `}
+</SyntaxHighlighter>
+
+Pour vérifier que tout fonctionne correctement, entre ces commandes et vérifie si le résultat correspond à ton nom et à ton adresse mail
+
+<SyntaxHighlighter language='bash'>
+  {`
+  git config --get user.name
+  git config --get user.email
+  `}
+</SyntaxHighlighter>
+
+### 2.2 Créer un compte Github
+
+Rend toi simplement sur le site Github et créer toi un compte !
+
+### 2.3 Créer une clé SSH
+
+Une clé SSH est un identifiant sécurisé par cryptage. C’est comme un mot de passe très long utilisé pour identifier ton ordinateur. Github utilise les clés SSH pour te permettre de télécharger vers ton dépôt sans avoir à taper ton nom d’utilisateur et ton mot de passe à chaque fois.
+
+{<LinkPreviewer
+    href='https://fr.wikipedia.org/wiki/Secure_Shell'
+    image='https://imgs.search.brave.com/Qc55WGoxcsfpg30Xc7i9zKGfeEzB8Ew_mIi_bsM081k/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5D/OFphdEV1ZGhrV3hz/WW5iNEp5dkd3SGFF/SyZwaWQ9QXBp'
+    title='Secure Shell'
+    text='Secure Shell (SSH) est à la fois un programme informatique et un protocole de communication sécurisé. Le protocole de connexion impose un échange de clés de chiffrement en début de connexion.'
+/>}
+
+Tout d’abord il faut vérifier si tu as une clé SSH déjà installée. Tape dans le terminer et vérifier avec les informations suivantes:
+
+<SyntaxHighlighter language='bash'>
+  {`
+  ls ~/.ssh/id_ed25519.pub
+  `}
+</SyntaxHighlighter>
+
+Si un message apparaît dans le terminal contenant le texte “No such file or directory”, alors tu n’as pas encore de clé SSH Ed22519, et tu dois en créer une. Si aucun message de ce type n’apparaît, tu peux passer à l’étape 2.4.
+
+Pour créer une nouvelle clé SSH, exécute la commande suivante dans ton terminal. L’indicateur -C suivi de ton adresse e-mail permet à Github de savoir qui tu es.
+
+Remarque : les crochets `<>` dans l’extrait de code, indiquent que tu dois remplacer cette partie de la commande par tes propres informations. N’inclus pas les crochets eux-mêmes dans ta commande. Par exemple, si ton adresse mail c’est `monemail@yahoo.com` tu vas taper:
+
+<SyntaxHighlighter language='bash'>
+  {`
+  ssh-keygen -t ed25519 -C monemail@yahoo.com
+  `}
+</SyntaxHighlighter>
+
+Quand il te demande un emplacement pour enregistrer la clé générée, appuie simplement sur Entrée.
+
+Ensuite, il va te demander un mot de passe : tu peux, mais ce n’est pas obligatoire.
+
+### 2.4 Link ta clé SSH à Github
+
+Tu dois maintenant indiquer à Github quelle est ta clé SSH afin de pouvoir pousser ton code sans avoir à taper un mot de passe à chaque fois.
+
+Connecte toi à Github, et clique sur ta photo de profil dans le coin supérieur droit. Ensuite, sur paramètre dans le menu déroulant.
+
+Ensuite, dans la partie gauche, clique sur clé SSH et GPG.
+
+Ensuite, clique sur le bouton vert dans le coin supérieur droit qui indique Nouvelle clé SSH. Donne à ta clé un nom suffisamment descriptif pour que tu puisses te rappeler d’où elle provient. Laisse cette fenêtre ouverte pendant que tu effectues les étapes suivantes.
+
+Tu dois maintenant copier ta clé SSH publique. Il faut que tu entres dans ton terminal
+
+<SyntaxHighlighter language='bash'>
+  {`
+  cat ~/.ssh/id_ed25519.pub
+  `}
+</SyntaxHighlighter>
+
+Copie la sortie de cette commande, qui commence par ssh-ed25519 et se termine par ton adresse mail.
+
+Maintenant, retourne sur Github dans la fenêtre de ton navigateur et colle ta clé que tu as copiée dans le champ de la clé. Puis, clique sur Ajouter une clé SSH. C’est fait !
+
+### 2.5 Teste ta clé
+
+Suis cette article de Github pour vérifier ta clé SSH
+
+{<LinkPreviewer
+    href='https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection'
+    image='https://imgs.search.brave.com/VnWmOIxnm_wL91accPo315Xmbj2Ako6_IQRiMk6FK5A/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC54/ekpqWmxiaWRfNTNX/dEc2c0dKODV3SGFF/SyZwaWQ9QXBp'
+    title='Testing your SSH connection'
+    text="After you've set up your SSH key and added it to your account on GitHub.com, you can test your connection."
+/>}
+
+<br />
+## Un peu de pratique
+<br />
+
+On va voir ici les commandes Git courantes utilisées pour gérer tes projets et télécharger ton travail sur Github. C’est les commandes Git de bases. Lorsque tu utilises Git, ce sont les commandes que tu vas utiliser 70 à 80% du temps. Donc si tu arrives à les maîtriser, tu auras fais plus que la moitié du chemin vers la maîtrise de Git !
+
+Github à récemment mis à jour la façon dont il nomme la branche par défaut. Cela signifie que tu dois t’assurer que tu utilises une version récente de git (2.28 ou plus).
+Tu peux vérifier cela en exécutant :
+
+<SyntaxHighlighter language='bash'>
+  {`
+  git --version
+  `}
+</SyntaxHighlighter>
+
+Si tu ne l’a pas encore fait, définit ta branche git locale par défaut à main. Tu peux le faire en exécutant :
+
+<SyntaxHighlighter language='bash'>
+  {`
+  git config --global init.defaultBranch main
+  `}
+</SyntaxHighlighter>
+
+{<LinkPreviewer
+    href='https://github.com/github/renaming'
+    image='https://imgs.search.brave.com/VnWmOIxnm_wL91accPo315Xmbj2Ako6_IQRiMk6FK5A/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC54/ekpqWmxiaWRfNTNX/dEc2c0dKODV3SGFF/SyZwaWQ9QXBp'
+    title='Renaming the default branch from master'
+    text="Many communities, both on GitHub and in the wider Git community, are considering renaming the default branch name of their repository from master"
+/>}
+
+### Créer un repository
+
+1. Tu dois avoir déjà un compte Github
+
+2. Créer un nouveau repo en cliquant sur le button indiquer dans le screen
+
+<img className='post-img' src='/git/1.jpg' alt='Image alt' />
+
+3. Donne à ton repo le nom “git-test” dans le champ de saisie du nom. Coche “Add a README file”. Et puis créer le repo en cliquant sur le bouton vers “Create repository” en bas de la page.
+
+<img className='post-img' src='/git/2.jpg' alt='Image alt' />
