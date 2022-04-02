@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -8,16 +9,24 @@ import { Categories } from '../components/Categories';
 
 export default function Home({ posts }) {
   const hotPost = posts[0];
+  const [filter, setFilter] = useState('job');
+
+  posts.map((post) => {
+    console.log(post.frontMatter.tags[0]);
+    // if(post.frontMatter.ta)
+  });
+
+  const postsContent = posts.map((post, index) => (
+    <Post key={index} post={post} index={index} />
+  ));
+
+  // const postsContentWithFilter = posts.map(post)
 
   return (
     <Layout>
       <HotPost hotPost={hotPost} />
       <Categories />
-      <div className='container'>
-        {posts.map((post, index) => (
-          <Post key={index} post={post} index={index} />
-        ))}
-      </div>
+      <div className='container'>{postsContent}</div>
     </Layout>
   );
 }

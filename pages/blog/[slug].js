@@ -50,7 +50,7 @@ const PostPage = ({
       <Wrapper>
         <div className='info'>
           <div className='top'>
-            <span className='tag'>{tags[0]}</span>
+            <span className='tag'>{tags}</span>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'

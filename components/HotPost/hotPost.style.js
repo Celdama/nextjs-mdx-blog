@@ -52,4 +52,5 @@ export const Tag = styled.span`
   background-color: #eeb395;
   padding: 6px 8px;
   color: #352f43;
+  text-transform: capitalize;
 `;
