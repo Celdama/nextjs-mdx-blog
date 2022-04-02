@@ -266,3 +266,132 @@ Si tu ne l’a pas encore fait, définit ta branche git locale par défaut à ma
 3. Donne à ton repo le nom “git-test” dans le champ de saisie du nom. Coche “Add a README file”. Et puis créer le repo en cliquant sur le bouton vers “Create repository” en bas de la page.
 
 <img className='post-img' src='/git/2.jpg' alt='Image alt' />
+
+4. Cela va te rediriger vers ton nouveau repo sur Github. Pour être prêt à copier (cloner) ce repo sur ton ordinateur local, clique sur le bouton vert “code”. Sélectionne ensuite l’option HTTPS, et copie la ligne ci-dessous.
+
+5. Utilise la ligne de commande sur ton ordinateur local pour créer un nouveau répertoire pour ce test. Créer un répertoire appelé `www` avec la commande `mkdir` dans ton dossier personnel, et déplace toi dedans ensuite.
+
+6. Il est temps de cloner ton repo Github sur ton ordinateur avec `git clone` suivi de l’URL que tu as copiés à l’étape précédente.
+
+<img className='post-img' src='/git/3.jpg' alt='Image alt' />
+
+7. C’est fait ! Tu as réussi à connecter ton repo Github à ton ordinateur local. Pour tester tu peux te rendre dans le nouveau dossier git_test qui a été téléchargé, puis entrer `git remote -v` Cela va afficher l’URL du repo que tu as créé sur Github.
+
+<img className='post-img' src='/git/4.jpg' alt='Image alt' />
+
+### Utiliser le workflow Git
+
+1. Crée un nouveau fichier dans le dossier `git test` appelé `hello_world.txt` avec la commande `touch hello_world.txt`
+
+<img className='post-img' src='/git/5.jpg' alt='Image alt' />
+
+2. Tape `git status` dans ton terminal. Tu vas remarquer que ton fichier `hello_world.txt` est affiché en rouge, ce qui signifie que ce fichier n'est pas indexé.
+
+<img className='post-img' src='/git/6.jpg' alt='Image alt' />
+
+3. Tape `git add hello_world.txt` Cette commande ajoute ton fichier hello_world.txt à la staging area de Git. La zone de transit fait partie du processus en deux étapes pour effectuer un commit dans Git. Pense à la zone de transit comme une “salle d’attente” pour tes changements jusqu’à ce que tu les envois sur Github. Maintenant, tape à nouveau `git status`. Dans la sortie, tu remarques que ton fichier est maintenant en vert, ce qui signifie que ton fichier est maintenant dans la zone de transit.
+
+<img className='post-img' src='/git/7.jpg' alt='Image alt' />
+
+4. Tape `git commit -m "Add hello_world.txt" et ensuite tape git status une fois de plus. La sortie devrait maintenant dire : "nothing to commit, working tree clean", indiquant que tes changements ont été commit.
+
+<img className='post-img' src='/git/8.jpg' alt='Image alt' />
+
+5. Le message “Your branch is ahead of ‘origin/main’ by 1 commit” signifie simplement que tu as maintenant des changements plus récents que ce qui se trouve sur ton repo Github distant.
+
+6. Tape `git log`et regarde la sortie. Tu devrais voir une entrée pour ton commit “Add hello_world.txt”. Tu verras également des détails sur l’auteur qui a fait le commit et la date et l’heure du commit. Si ton terminal est bloqué dans un écran avec (END) en bas, appuis simplement sur “q” pour sortir.
+
+<img className='post-img' src='/git/9.jpg' alt='Image alt' />
+
+### Modifier un fichier
+
+1. Ouvre le fichier `README.md` dans ton éditeur. Je vais utiliser Visual Studio Code, en utilisant la commande `code .` à l’intérieur de ton dossier.
+
+<img className='post-img' src='/git/10.jpg' alt='Image alt' />
+
+2. Ajoute “Hello World!” dans ton fichier et enregistrer le fichier avec “Command + S” ou “Ctrl+S”.
+
+<img className='post-img' src='/git/11.jpg' alt='Image alt' />
+
+3. Retourne dans ton terminal, et tape `git status`. Tu verras que le fichier `README.md` est maintenant affiché comme n’étant ni indexé ni validé.
+
+<img className='post-img' src='/git/12.jpg' alt='Image alt' />
+
+4. Ajoute le `README.md` à la zone de transit avec `git add README.md`
+
+5. Tu peux deviner ce que `git status` va afficher maintenant ? `README.md` sera affiché en vert. Cela signifie que le fichier `README.md` a été ajouté à la zone de transit. Le fichier `hello_world.txt`ne sera pas affiché car il n’a pas été modifié depuis qu’il a été commit.
+
+<img className='post-img' src='/git/13.jpg' alt='Image alt' />
+
+6. Commit ton fichier `README.md` avec la commande `git commit -m "edit README.md`. Ensuite tape `git status` qui affichera “nothing to commit”.
+
+<img className='post-img' src='/git/14.jpg' alt='Image alt' />
+
+7. Jette un dernier coup d’oeil à tes commit avec `git log`.
+
+<img className='post-img' src='/git/15.jpg' alt='Image alt' />
+
+### Push tes modifications sur Github
+
+1. Tape `git push`
+
+<img className='post-img' src='/git/16.jpg' alt='Image alt' />
+
+2. Tape `git status`
+
+<img className='post-img' src='/git/17.jpg' alt='Image alt' />
+
+3. Quand tu reload la page de ton repo sur Github, tu devrais voir les fichiers `README.md` et `hello_world.txt` que tu viens de push depuis ton ordinateur.
+
+<img className='post-img' src='/git/18.jpg' alt='Image alt' />
+
+<br />
+## Cheatsheet
+<br />
+
+Voici une liste des commandes Git les plus couramment utilisées. Essaye de te familiariser avec ces commandes afin de pouvoir éventuellement t’en souvenir :
+
+Commandes relatives à un repo distant:
+
+- `git clone git@github.com:USER-NAME/REPOSITORY-NAME.git`
+- `git push` ou `git push origin main` (Les deux accomplissent le même objectif dans ce contexte)
+
+Commandes relatives au workflow:
+
+- `git add .`
+- `git commit -m "Un message qui décrit ce que tu viens de faire"`
+
+Commandes relatives à la vérification de l’état ou de l’historique
+
+- `git status`
+- `git log`
+
+La syntax basic de Git est `program | action | destination`
+
+Par exemple :
+
+- `git add .` est compris en tant que `git | add | .` où la destination représente tout ce qu’il y a dans le répertoire courant.
+- `git commit -m "message"` est compris en tant que `git | commit -m | "message"`
+- `git status` est compris en tant que `git | status | (no destination)`
+
+<br />
+## Meilleures pratiques Git
+<br />
+
+Il y a beaucoup à apprendre sur l’utilisation de Git. Git n’est pas seulement utile lorsque tu collabores avec d’autres personnes. Il est également utile lorsque tu travailles de manière indépendante.
+
+Deux bonnes pratiques à considérer sont les commits atomiques et l’utilisation de ces commits atomiques pour rendre tes messages de commit plus utiles aux futurs collaborateurs.
+
+Un commit atomique est un commit qui inclut des changements liés à une seule fonctionnalité ou tâche de ton programme. Il y a deux raisons principales à cela : d’abord, si un changement que tu apportes s’avère causer des problèmes, il est facile de revenir sur ce changement spécifique sans perdre les autres changements ; et ensuite, cela va te permettre d’écrire de meilleurs messages de commit, car plus spécifique.
+
+Les commandes vues dans cet article sont celles que tu utiliseras le plus souvent avec Git. Ne t’inquiète pas si tu ne connais pas toutes les commandes. A force de les utiliser, cela va rentrer tout seul. Pour tous tes futurs projets, prends l’habitude de créer un repo github, et de push tes modifications de manières atomique !
+
+<br />
+## D'autres ressources que j'ai consommées en vrac
+<br />
+
+{<YoutubeLinkPreviewer url='https://www.youtube.com/embed/SWYqp7iY_Tc' />}
+{<YoutubeLinkPreviewer url='https://www.youtube.com/embed/xuB1Id2Wxak' />}
+{<YoutubeLinkPreviewer url='https://www.youtube.com/embed/RGOj5yH7evk' />}
+{<YoutubeLinkPreviewer url='https://www.youtube.com/embed/8JJ101D3knE' />}
+{<YoutubeLinkPreviewer url='https://www.youtube.com/embed/USjZcfj8yxE' />}
