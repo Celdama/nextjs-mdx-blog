@@ -36,6 +36,8 @@ export const TagsList = styled.div`
     li {
       font-size: 0.9rem;
       padding: 6px 8px;
+      text-transform: capitalize;
+      cursor: pointer;
     }
 
     @media screen and (max-width: 500px) {
