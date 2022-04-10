@@ -37,6 +37,9 @@ const nextConfig = {
       'git-scm.com',
       'blog.red-badger.com',
       'wac-cdn.atlassian.com',
+      'github.com',
+      'softcover.s3.amazonaws.com',
+      'camo.githubusercontent.com',
     ],
   },
 };

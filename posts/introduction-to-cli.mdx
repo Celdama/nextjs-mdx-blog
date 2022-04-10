@@ -1,0 +1,173 @@
+---
+title: 'Les bases de la ligne de commande'
+date: 'Avril 10, 2022'
+description: ''
+thumbnailUrl: '/introduction-to-cli.jpg'
+tags: 'CLI'
+id: 6
+---
+
+## Introduction
+
+<img className='post-img' src='/cli/1.jpg' alt='Image alt' />
+
+Cet écran ou cette fenêtre noire est l'interface de ligne de commande (CLI), où tu peux saisir des commandes que ton ordinateur exécutera pour toi.
+
+L’utilisation de la ligne de commande est une compétence essentielle à acquérir en tant que développeur. C’est à partir de cette ligne de commande que tu pourras lancer d’autres programmes et interagir avec eux. Elle possède sa propre syntaxe, que tu apprendras rapidement, vu le nombre de fois où tu devras les utiliser.
+
+On va juste voir dans cet article comment tu peux naviguer dans ton ordinateur et manipuler des fichiers et répertoires directement depuis ta ligne de commande.
+
+## Teste ton terminal
+
+Ouvre un terminal sur ton ordinateur, si tu ne sais pas comment faire je t’invite à rechercher sur google la réponse; prends l’habitude chercher sur google la réponse à tes questions est une très bonne habitude à prendre !
+
+Avant de faire quoi que ce soit, rentre cette commande dans ton terminal (le $ signifie qu’il s’agit ici d’une commande destinée à être utilisée dans le terminal, tu n’as pas à l’écrire).
+
+<SyntaxHighlighter language='bash'>
+  {`
+  $ whoami
+  `}
+</SyntaxHighlighter>
+
+<img className='post-img' src='/cli/2.jpg' alt='Image alt' />
+
+Tu obtiens ton nom d'utilisateur :) !
+
+## Pourquoi apprendre la ligne de commande ?
+
+Tout au long de ta carrière, reconversion pour devenir dev, tu feras un usage intensif de la ligne de commande. La semaine dernière je te parlais de Git [link git], et toute ton utilisation de git se fera principalement au sein de la ligne de commande. Dans un contexte un peu plus large, il est fort possible que tu utilise la ligne de commande quotidiennement dans ta carrière de dev, c’est donc une compétence indispensable à avoir dans ta boîte à outils.
+
+Un autre petit exercise assez cool à réaliser est de voir comment créer un fichier. Tu vas pouvoir le faire avec la commande `touch`
+
+Ouvre un terminal, et entre `ls` . `ls` va te montrer les fichiers et les dossiers dans le répertoire actuel (ou rien si le répertoire est vide).
+
+<img className='post-img' src='/cli/3.jpg' alt='Image alt' />
+
+Utilise maintenant la commande `touch test.txt` pour créer un fichier, et tape de nouveau `ls`: tu devrais voir ton fichier test.txt listé dans la sortie de ta commande.
+
+<img className='post-img' src='/cli/4.jpg' alt='Image alt' />
+
+Tu peux aussi utiliser la commande touch pour créer plusieurs fichiers à la fois `touch index.html script.js`
+
+<img className='post-img' src='/cli/5.jpg' alt='Image alt' />
+
+Je te conseil maintenant de lire au moins le chapitre 1 de cette ressource:
+
+{<LinkPreviewer
+    href='https://www.softcover.io/read/fc6c09de/unix_commands/basics'
+    image='https://imgs.search.brave.com/KbkY5CIc7XV2T2Cj9kp5GqzKG_v-oL58OWktiihNYFc/rs:fit:808:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5H/cVhrczhqSXBBUmQw/U1kybzRxOTNnSGFF/VyZwaWQ9QXBp'
+    title='Conquering the Command Line'
+    text='It’s important to have a firm grasp on the basics of how to use the Unix (or Linux) command line. This includes navigating around directories, copying files, creating files, etc.'
+/>}
+
+## Utiliser la ligne de commande comme un pro
+
+Il est vraiment utile d’apprendre à compléter les tabulations. Cette astuce va te faire gagner énormément de temps et de frustration.
+
+{<LinkPreviewer
+    href='https://en.wikipedia.org/wiki/Command-line_completion'
+    image='https://imgs.search.brave.com/dh6osOppeW-AHDkcYfSwGhbjyeF05IQjS4g7tSNdtVk/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5h/OE5xUjZsOHdnZ3F4/LXpkVTJ0ZERBSGFF/OCZwaWQ9QXBp'
+    title='Command-line completion'
+    text='Command-line completion (also tab completion) is a common feature of command-line interpreters, in which the program automatically fills in partially typed commands.'
+/>}
+
+Disons que tu es dans la ligne de commande et que tu dois te déplacer dans un dossier éloigné, quelque chose comme :
+
+<SyntaxHighlighter language='bash'>
+  {`
+  ~/Documents/tonNom/mesprojets/javascript/calculator/.
+  `}
+</SyntaxHighlighter>
+
+C’est une longue commande à taper, et tout doit être exactement correct pour que cela fonctionne. En appuyant sur la touche Tab, la ligne de commande va compléter automatiquement les commandes que tu as commencé à taper. Voici un exemple, j’ai juste taper `cd` et ensuite ma touche tab pour auto-compléter ma commande.
+
+<img className='post-img' src='/cli/6.jpg' alt='Image alt' />
+<br />
+<img className='post-img' src='/cli/7.jpg' alt='Image alt' />
+
+Fais plusieurs essaies de ce système de tab pour naviguer et commence à devenir à l’aise avec son fonctionnement.
+
+Voici le terminal que j’utilise si cela t’intéresse:
+{<LinkPreviewer
+    href='https://hyper.is/'
+    image='https://imgs.search.brave.com/aQ6z_fP0OwjLtkm1AIfLbzfvcIuEexdq_4HsAKByvpk/rs:fit:1200:600:1/g:ce/aHR0cHM6Ly9hc3Nl/dHMuemVpdC5jby9p/bWFnZS91cGxvYWQv/djE1NDk3MjM4NDYv/cmVwb3NpdG9yaWVz/L2h5cGVyL2h5cGVy/LTMtcmVwby1iYW5u/ZXIucG5n'
+    title='Hyper'
+    text='The goal of the project is to create a beautiful and extensible experience for command-line interface users, built on open web standards. In the beginning, our focus will be primarily around speed, stability and the development of the correct API for extension authors.'
+/>}
+
+Il existe un autre raccourci très pratique pour ouvrir tout ce qui se trouve dans le répertoire d’un projet. `.` Une fois que tu as installé un éditeur de texte (VSCode dans mon cas), tu peux utiliser ce raccourci pour ouvrir un projet entier et tous ses fichiers en une seule fois.
+
+Ce raccourci est aussi souvent utilisé avec Git, avec des commandes comme `git add .`
+
+{<LinkPreviewer
+    href='https://monblog-celdama.vercel.app/blog/introduction-to-git'
+    image='/introduction-to-git.jpg'
+    title='Les bases de Git'
+    text='Pour faire simple, tu peux te représenter Git comme un bouton de sauvegarde vraiment puissant de tes fichiers et répertoires. Officiellement, Git est un système de contrôle de version.'
+/>}
+
+Tu vas utiliser la commande `code .` pour ouvrir ton dossier dans ton éditeur de texte.
+
+<img className='post-img' src='/cli/8.jpg' alt='Image alt' />
+
+Si tu es sur mac, pour utiliser l’ouverture de fichier dans VSCode, il faudra peut-être que tu installes une extension. Regarde ce lien
+
+{<LinkPreviewer
+    href='https://code.visualstudio.com/docs/setup/mac'
+    image='https://imgs.search.brave.com/SEpn7-kTq_EA4G-77UssyMsu2PvogG1onhHwJEhLP44/rs:fit:724:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5t/dFVHQmlzdUticmFN/RFhnc0J5czRBSGFF/MiZwaWQ9QXBp'
+    title='Running VSCode on macOS'
+    text="Open the browser's download list and locate the downloaded app or archive."
+/>}
+
+## Un peu de pratique
+
+Tu vas t’entraîner rapidement à créer des fichiers et des répertoires et à les supprimer. Toutes ces commandes doivent être entrées dans ton terminal. Si tu galères un petit peu, pas de soucis, prend le temps de rechercher sur google la réponse à ta question.
+
+1. Créer un nouveau répertoire avec le nom `test`
+2. Navigue dans ce répertoire `test`
+3. Créer un nouveau fichier `test.txt`
+4. Ouvre ce fichier `test.txt` dans VSCode.
+5. Sort de ton répertoire `test`
+6. Supprime le répertoire `test`
+
+Et voilà, tu viens de découvrir les bases de la ligne de commande ! Si tu prends l’habitude de faire la plupart des choses, que tu auras à faire lors de ton apprentissage, à partir de la ligne de commande, ces commandes deviendront rapidement une seconde nature. Il est beaucoup plus efficace de déplacer et de copier des fichiers à partir de la ligne de commande.
+
+Je t’invite maintenant à prendre connaissance de ces différentes ressources, qui m’ont aidé dans mon apprentissage.
+
+{<LinkPreviewer
+    href='https://github.com/jlevy/the-art-of-command-line#readme'
+    image='https://github.com/jlevy/the-art-of-command-line/raw/master/cowsay.png'
+    title='The Art of Command Line'
+    text="Fluency on the command line is a skill often neglected or considered arcane, but it improves your flexibility and productivity as an engineer in both obvious and subtle ways."
+/>}
+
+{<LinkPreviewer
+    href='https://www.learnenough.com/command-line-tutorial'
+    image='https://softcover.s3.amazonaws.com/636/learn_enough_command_line/images/figures/dev_desktop.png'
+    title='Learn Enough Command Line to Be Dangerous'
+    text="Learn Enough Command Line to Be Dangerous is an introduction to the command line for complete beginners, the first in a series of tutorials designed to teach the common foundations of “computer magic”"
+/>}
+
+{<LinkPreviewer
+    href='https://explainshell.com/'
+    image='https://imgs.search.brave.com/27O32Kyqx9qiB1WkGlkUUX0TasHB5OlLq2v4FtOn_Q8/rs:fit:1200:603:1/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/bWF4LzI0NjQvMSp6/MzhEREYwMkhGTzE1/QjBYN1ZwOVl3LnBu/Zw'
+    title='explainshell'
+    text="match command-line arguments to their help text"
+/>}
+
+{<LinkPreviewer
+    href='https://files.fosswire.com/2007/08/fwunixref.pdf'
+    image='https://imgs.search.brave.com/JFAs_8PmoN7ibLN8VULD6J0U9C-6lLQ1FVW98Ib9YiE/rs:fit:380:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5M/Nlp4RlZsRm5lTUMx/bjhhb2xfRzB3SGFK/UCZwaWQ9QXBp'
+    title='CLI cheat sheet'
+    text=""
+/>}
+
+{<LinkPreviewer
+    href='https://flashcards.github.io/command_line/introduction.html'
+    image='https://camo.githubusercontent.com/9b596f227641e6174429f7493ddc6efe315a23fdeffcec1236daf4854162c12d/68747470733a2f2f666c6173686361726473696f2e73332e75732d656173742d322e616d617a6f6e6177732e636f6d2f6173736574732f73706f6e736f7265642e706e67'
+    title='Introduction | Command Line Flashcards'
+    text="Flashcards.github.io is a community-based collection of open-source developer flashcards to boost your professional skills."
+/>}
+
+Regarde toute la série de ces vidéos youtube.
+{<YoutubeLinkPreviewer url='https://www.youtube.com/embed/videoseries?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ' />}
