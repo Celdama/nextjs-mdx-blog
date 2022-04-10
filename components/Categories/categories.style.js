@@ -4,6 +4,11 @@ export const Wrapper = styled.div`
   font-family: sans-serif;
   margin: 20px 0;
   color: #2c2e42;
+
+  .current {
+    background-color: #352f43;
+    color: whitesmoke;
+  }
 `;
 
 export const Header = styled.div`
@@ -27,11 +32,6 @@ export const TagsList = styled.div`
     display: flex;
     padding: 0;
     justify-content: space-between;
-
-    .current {
-      background-color: #352f43;
-      color: whitesmoke;
-    }
 
     li {
       font-size: 0.9rem;
